@@ -1,0 +1,20 @@
+// Copyright 2017 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+alert("hiii");
+function submitt(){
+   alert('h2');
+   console.log('outpur1');
+   console.log(document.getElementsByClassName("form-control autogrow")[0].value);
+   var center=document.getElementsByClassName("form-control autogrow")[0].value;
+   url="http://192.168.55.40:8000/adverse/ghf1";
+   url=url.concat(center);
+   var xhttp = new XMLHttpRequest();
+   xhttp.open("POST", url, true);
+   xhttp.send("fnamejjjjj");
+}
+var btn = document.createElement("BUTTON");
+var t = document.createTextNode("CLICK ME");
+btn.appendChild(t);
+document.body.appendChild(btn);
+btn.attachEvent('OnClick',submitt());
